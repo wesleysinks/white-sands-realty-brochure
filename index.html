@@ -1,0 +1,127 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>White Sands Realty</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="container page">
+          <header>
+            <img src="img/WhiteSands_White_large.svg" alt="White Sands Logo">
+            <h1><input type="text" name="Property Description" value="Breathtaking 5 Bedroom 3.5 Bath Home"></h1>
+          </header>
+          <section>
+            <h2>
+              <input type="text" name="Property Tagline" value="Perfect for large a large family or guests!">
+            </h2>
+            <div id="mainBlock">
+              <form id="form1" runat="server">
+                <input type='file' id="imgInp" accept="image/*" />
+                <img id="mainImg" src="img/default1.jpg" alt="Main Property Image" />
+              </form>
+              <div id="description">
+                <textarea name="description" rows="4" cols="60">Under Construction, Model Available to view. This home is breathtaking. This home offers 5 bedrooms 3.5 baths with a 3 car garage.</textarea>
+              </div>
+              <div id="aside">
+                <input type="text" name="Price" value="$310,290">
+                <input type="text" name="Address1" value="10911 Purple Martin Boulevard">
+                <input type="text" name="Address2" value="Riverview, FL 33579">
+                <input type="text" name="MLS" value="MLS #T2919036">
+                <input type="text" name="Tour" value="VIRTUAL TOUR">
+              </div>
+            </div>
+            <div id="lowerBlock">
+              <div id="specs">
+                <textarea name="specs" rows="12" cols="90">
+                  3,777 square feet open plan, for a large family or entertaining
+                  Fabulous curb appeal with the relaxing front porch
+                  Enter the home to the open foyer and dining room
+                  Spacious kitchen with butler pantry & granite counters
+                  Brand New Stainless Steel GE appliances
+                  Open floorplan with living room and dining room combo
+                </textarea>
+              </div>
+              <div id="agent">
+                <input type='file' id="imgInp2" accept="image/*" />
+                <img id="agtImg" src="img/agent.jpg" alt="Agent Headshot" />
+                <div id="agtInfo">
+                  <input type="text" name="Agent" value="Michael Burke">
+                  <input type="text" name="AgentPhone" value="941.345.3593">
+                  <input type="text" name="AgentTitle" value="Broker-Owner | Realtor">
+                  <input type="text" name="AgentEmail" value="MBurke@WhiteSandsFL.com">
+                </div>
+              </div>
+              <div id="company">
+                <input type="text" name="Company" value="White Sands Realty Group">
+                <input type="text" name="CompanyAddr1" value="1730 Stickney Point Road">
+                <input type="text" name="CompanyAddr2" value="Sarasota, Florida 34231">
+                <input type="text" name="CompanySite" value="www.WhiteSandsFL.com">
+              </div>
+              <div id="photos">
+                <input type='file' id="imgInp3" accept="image/*" />
+                <img id="feat1" src="img/default2.jpg" alt="Feature Image 1" />
+                <input type='file' id="imgInp4" accept="image/*" />
+                <img id="feat2" src="img/default3.jpg" alt="Feature Image 2" />
+                <input type='file' id="imgInp5" accept="image/*" />
+                <img id="feat3" src="img/default4.jpg" alt="Feature Image 3" />
+              </div>
+            </div>
+          </section>
+        </div>
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+
+            function readURL(input, output) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $(output).attr('src', e.target.result);
+                    }
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+
+            $("#imgInp").change(function(){
+                readURL(this, '#mainImg');
+            });
+            $("#imgInp2").change(function(){
+                readURL(this, '#agtImg');
+            });
+            $("#imgInp3").change(function(){
+                readURL(this, '#feat1');
+            });
+            $("#imgInp4").change(function(){
+                readURL(this, '#feat2');
+            });
+            $("#imgInp5").change(function(){
+                readURL(this, '#feat3');
+            });
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
