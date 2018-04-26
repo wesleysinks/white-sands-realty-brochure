@@ -104,6 +104,11 @@ html, p, input[type=text], textarea {
   font-weight: 500;
 }
 
+textarea {
+  overflow: hidden!important;
+  resize: none;
+}
+
 .page {
   height: auto;
   width: 816px;
